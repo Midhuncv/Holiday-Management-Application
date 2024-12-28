@@ -1,0 +1,26 @@
+# Ignore .env file for sensitive data like API keys
+.env
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore database files
+db.sqlite3
+
+# Ignore migrations
+holidays/migrations/
+
+# Ignore static files (if you're using the collectstatic command)
+static/
+
+# Ignore media files (if you're storing user uploads)
+media/
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore the virtual environment folder
+env/
+venv/
