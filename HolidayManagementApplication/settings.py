@@ -10,6 +10,24 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+
+
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+
+CALENDARIFIC_API_KEY = os.getenv('CALENDARIFIC_API_KEY')
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': 'cache/',  
+    }
+}
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'HolidayApp.urls',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
